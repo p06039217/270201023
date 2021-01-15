@@ -1,12 +1,11 @@
 def hailstone(n):
+  print(n)
   if n == 1:
-    print(1)
+    pass
   elif n % 2 == 0 :
-    print(n)
-    hailstone(n/2)
+    hailstone(n//2)
   elif n % 2 != 0 :
-    print(n)
     hailstone(3*n+1)
 
 
-hailstone(5)
+hailstone(11)
