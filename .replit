@@ -1,2 +1,2 @@
 language = "python3"
-run = "python lab12/DNA.py"
+run = "python lab13/selection_sort.py"

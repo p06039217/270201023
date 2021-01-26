@@ -1,6 +1,7 @@
 class DNA:
-  def __init__(self,dna):
-    self.dna = dna
+  dna = ""
+  def __init__(self,d_n_a):
+    self.dna = d_n_a
   
   def count_nucleotides(self):
     nucleotide_dict = dict()
@@ -24,6 +25,10 @@ class DNA:
     nucleotide_dict["T"] = T
     nucleotide_dict["C"] = C
     return nucleotide_dict
+
+  def get_dna_string(self):
+    return self.dna
+  
   def calculate_complement(self):
     dna_comp = ""
     for i in self.dna:
@@ -54,9 +59,25 @@ class DNA:
     return locations
 
 
-dna1 = DNA("ATAT")
+dna = DNA("ATGCA")
+print(dna.count_nucleotides())
 
-print(dna1.find_motif("GATATATGCATATACTT"))
+ 
+
+complement_dna = dna.calculate_complement()
+print(complement_dna)
+
+ 
+
+dna_1 = DNA("GAGCC")
+dna_2 = DNA("CATCG")
+print(dna_1.count_point_mutations(dna_2.get_dna_string()))
+
+ 
+
+dna_3 = DNA("GATATATGCATATACTT")
+dna_4 = DNA("ATAT")
+print(dna_4.find_motif(dna_3.get_dna_string()))
 
 
 

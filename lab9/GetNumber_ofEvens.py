@@ -9,4 +9,4 @@ def get_event(n, m = 0):
     get_event(n[:-1],m) 
 
 
-get_event([0, 1, 2, 6 ,5 ,3, 4, 5])
+print(get_event([0, 1, 2, 6 ,5 ,3, 4, 5]))
